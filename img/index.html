@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="img/512x512bb.jpg " style="width: 70px; height:70px;">
+            <div class="nav"> 
+                <ul>
+                    <li>React</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+  
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-1">
+                    <h1><b>[React 01] Lorem ipsum dolor sit amet</b></h1>
+         
+                    <div class="react">
+                    <span class="category" >React</span>
+                    <span class="date">Thu 7, 04/06/    2022</span>
+                    </div>
+                 <b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus adipisci molestiae fuga consequatur dolore voluptate dignissimos veritatis cum eligendi. Nisi eius aspernatur, minima exercitationem unde temporibus obcaecati iste laboriosam deserunt?</b>
+                    <img src="img/addreacttowebsite.png">
+                    <p> Vừa làm xong task hôm nay, thì tự nhiên lại chợt nhớ về mối lương duyên của NavaTa với thư viện React nên mình quyết định xuất bản bài viết này.
+
+                    Khoảng đầu năm 2017, lúc đó NavaTa đang làm dự án CRM (Customer relationship management) của một công ty Hàn Quốc đang dùng Angular phiên bản đầu tiên, phần mềm có khá nhiều menu lớn như Mail, Comanage (giống như Jira), Approval, HR … mỗi menu lại có nhiều menu nhỏ và tính năng trong đó. Với một framework và hệ thống lâu đời thì yêu cầu nó cần được thay đổi cả về diện mạo và hiệu suất để mang đến trải nghiệm người dùng tốt hơn.
+                    
+                    Trong bối cảnh đó, anh em lập trình đã tìm hiểu về công nghệ, xu hướng và so sánh những framework và library javascript lúc đó để đi đến quyết định cuối cùng là React.
+                    
+                    Tất nhiên với một hệ thống lớn và phức tạp như hiện tại, không thể chuyển đổi 100% qua thư viện mới ngay lập tức mà thay vào đó sẽ chuyển đổi sang React cho từng menu lớn. Với sự cập nhật này, hệ thống đã dần có UI hiện đại và hiệu suất được cải thiện đáng kể hơn.
+                    
+                    Để đạt được kết quả như vậy, anh em cũng phải lên bờ xuống ruộng với thư viện React này từ việc quản lý state, prop, thiết kế component hay tối ưu đóng gói khi release sản phẩm … nói chung là cũng có khá là nhiều chuyện vui buồn với thư viện này mà có thời gian NavaTa sẽ chia sẻ chi tiết hơn.
+                    
+                    Thôi quay lại chủ đề hiện tại, để bắt đầu tìm hiểu React thì nên bắt đầu từ đâu và cần chuẩn bị những gì. Đó là câu hỏi mà chính bản thân của mình cũng đặt ra khi mới bắt đầu tìm hiểu thư viện này, qua quá trình làm việc thì mình có một vài kinh nghiệm cá nhân mình chia sẻ sau đây:
+                    
+                    Điều kiện cần 
+                    
+                    Có kiến thức căn bản về javascript: Thật ra react là thư viện javascript nên bản chất react sẽ xây dựng sẵn những chức năng (function) dựa trên ngôn ngữ javascript, nhiệm vụ của mình sẽ đọc tài liệu và sử dụng mà thôi. Vì vậy có kiến thức về javascript là yếu tố cực kỳ quan trọng, nó không chỉ giúp tiếp cận nhanh react và cũng như những thư viện và framework khác của javascript như AngularJS, VueJS, NodeJS …  
+                    Những kiến thức cần biết về javascript: 
+                    
+                    Cơ bản: Variables, Operators, Data Types, Functions, Objects, Events, Classes, Async/Await, Web APIs, JSON
+                    Kiến thức cần về phiên bản ES6: let, const, Arrow Functions, Default Parameter Values, Modules, Destructuring, Rest parameter, Spread Syntax, Template Literals
+                    Mình chỉ liệt kê những nội dung quan trọng và thường dùng trong javascript thôi, để tìm hiểu chi tiết hơn độc giả có thể xem thêm ở các website như: Codecademy, Udemy, w3schools…
+                    
+                    Biết sử dụng HTML/ CSS: React để phục vụ cho việc phát triển giao diện người dùng nên để làm cho UI trở nên đẹp và hiệu ứng sống động hơn thì có kinh nghiệm HTML/CSS là lợi thế. 
+                    Điều kiện đủ
+                    
+                    Nodejs: thông thường khi bắt đầu học react mọi người thường sử dụng một số tool hay framework react mã nguồn mở được xây dựng sẵn như Create React App, Next.js… Khi ở môi trường development, chúng thường chạy trên môi trường nodejs nên đồi hỏi độc giả cần có kiến thức cơ bản về nodejs. Không những thế, khi độc giả muốn phát triển một server độc lập để làm full-stack một website hoàn chỉnh thì nodejs lựa chọn hàng đầu hiện nay.
+                    NPM (Node Package Manager)): là chương trình quản lý thư viện giúp độc giả quản lý một số package cần cho dự án như react-router, redux-saga, react-thunk …. Vì vậy độc giả cần biết một số lệnh cơ bản để cài đặt, gỡ bỏ và nâng cấp những package trong dự án của mình. Thông thường NPM được cài sẵn theo gói nodejs.
+                    Webpack: được dùng để biên dịch các module của Javascript. Thông thường khi sử dụng tool hay framework react, nó sẽ được cài đặt sẵn độc giả sẽ ít thao tác với webpack. Nhưng với dự án lớn và phức tạp hơn, độc giả cần tìm hiểu về Webpack để có thể tùy biến và tối ưu ( như cài đặt đường dẫn, biên dịch tập tin jsx, css, js …)
+                    Git: đây là công cụ quản lý mã nguồn quá quen thuộc nên mình sẽ không nói nhiều nhé (Tìm hiểu thêm Git ở đây). 
+                    Docker, CI/CD, DevOps: thường khi đi làm công ty sẽ có đội ngũ riêng để quản lý cho những lĩnh vực này, nhưng khi độc giả có kiến thức về những vấn đề này sẽ đánh giá cào và ưu thế trong tuyển dụng cũng như trong quá trình làm việc.
+                    Thật ra với Điều kiện cần là độc giản có thể tạo ra ứng dụng về react cho riêng bản thân của mình rồi. Nhưng để có thể đi làm ở công ty hay phát triển dự án trong thực tế nên phải có cả Điều kiện cần và đủ. Mỗi mục mình nêu trên chỉ là những kiến thức cơ bản, trong quá trình làm việc chắc chắn đòi hỏi chúng ta phải tìm hiểu sâu rộng nhiều hơn.
+                    
+                    Hi vọng với bài viết này, sẽ giúp độc giả biết được những điều cần thiết để chuẩn bị và cũng như phát triển công việc với thư viện React nhé.
+                    
+                    </p>
+                    <h2>Thong tin chung ve React</h2>
+                    <ul>
+                        <li>Trang chu: <a href="https://www.google.com.au/">https://www.google.com.au/</a></li>
+                        <li>Ma nguon: <a href="https://www.google.com.au/">https://www.google.com.au/</a></li>
+                          <li>Phien ban on dinh: <a href="https://www.google.com.au/">https://www.google.com.au/</a></li>
+                        <li>Mot so website noi tieng su dung React: <a href="https://www.google.com.au/">https://www.google.com.au/</a></li>
+                    </ul>
+                    <hr style="margin-bottom: 30px;">
+            <div class="tag">
+                <h3>The</h3>
+                <span>ReactJS</span>
+            </div>
+                <hr style="margin-top: 30px;">
+                <div class="post">
+                    
+                    <h2>Bai viet lien quan</h2>
+                     <div class="row">
+                        <img class="re"src="img/ReactJS-1.jpg" alt="">
+                        <div class="text">
+                        <h3>[React 03] Them React vao website</h3>
+                        <span class="category"> React</span>
+                        <span class="date"> Chu nhat, 12/06/2022</span>
+                        </div>
+                     </div>
+
+                    
+                     <div class="row">
+                      
+                        <img class='re'src="img/s1i3j6powyg7tclhwj5x.png" alt="">
+                        <div class="text">
+                        <h3>[React 03] Them React vao website</h3>
+                        <span class="category"> React</span>
+                        <span class="date"> Chu nhat, 12/06/2022</span>
+                        
+                        </div>
+                     </div>
+
+                 </div>     
+
+                
+            </div>
+
+                
+
+                 <div class="col-2">
+                    <div class="textcontainer">
+                    <div class="textbox">
+                <h2 style="margin-bottom: -30px;">Chia se bai viet</h2>
+                <div class="row">
+               <div class="box-1" >
+                <i class="fa-brands fa-facebook-square"></i>
+                <h4 class="social">Facebook</h4>
+               </div>
+               <div class="box-2" class="'box-2">
+                <i class="fa-brands fa-twitter"></i>
+                <h4 class="social">Twitter</h4>
+               </div>
+            </div>
+            </div>
+        </div>
+     
+            
+                <div class="sidebar">
+                   
+                    <div class="carousel">
+                        <h3>[React02] Chuan bi nhung gi khi hoc React</h3>
+                        <img src="img/ReactJS-1.jpg">
+                        
+                    </div>
+
+                    <div class="carousel">
+                        <h3>[React03] Them React vao website</h3>
+                        <img src="img/retina_1708x683_0521-react-redux-and-immutablejs-Waldek_Newsletter-993b50f4ae56e9ee6e024a309c23a6c4.png">
+                        
+                    </div>
+                
+                </div>
+                
+             </div>
+           
+        
+         
+            </div>
+
+        </div> 
+    </div>
+    
+</body>
+</html>
